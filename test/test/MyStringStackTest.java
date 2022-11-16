@@ -36,8 +36,8 @@ public class MyStringStackTest extends TestCase {
 		stack.push (s1);
 		assertTrue (stack.isEmpty());
 		stack.push (s1);
-        	stack.push (s2);
-        	assertFalse (stack.isEmpty());
+	stack.push (s2);
+	assertFalse (stack.isEmpty());
 	}
 
 	@Test
@@ -61,7 +61,7 @@ public class MyStringStackTest extends TestCase {
 		}
 		assertSame (s1,o1);
 		assertTrue ("Stack should be empty after popping all elements", stack.isEmpty());
-		//assertTrue ( stack.isEmpty());
+		assertTrue ( stack.isEmpty());
 	}
 
 	@Test
@@ -70,7 +70,7 @@ public class MyStringStackTest extends TestCase {
 		MyStringStack stack = new MyStringStack();
 		assertTrue (stack.isEmpty());
 		stack.push(s1);
-		assertTrue(stack.isEmpty());
+		assertFalse(stack.isEmpty());
 		
 		try {
 			s3 = stack.pop();
